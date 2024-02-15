@@ -1,0 +1,24 @@
+name: Go Main Check
+
+on:
+  pull_request:
+    branches:
+      - main
+      - master
+    types: [opened, synchronize]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.17
+
+      - name: Build and Run Main
+        run: go run path/to/your/main.go
