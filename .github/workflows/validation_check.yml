@@ -17,8 +17,6 @@ jobs:
 
       - name: Set up Go
         uses: actions/setup-go@v2
-        with:
-          go-version: 1.17
 
       - name: Build and Run Main
         run: go run validation.go
