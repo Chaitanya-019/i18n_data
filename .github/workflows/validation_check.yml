@@ -18,6 +18,5 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v2
 
-
       - name: Build and Run Main
         run: go run validation.go
